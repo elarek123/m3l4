@@ -29,7 +29,6 @@ int main()
 
     {
         // #2
-        // Генерация первого вектора и печать
         vector <float> a;
         for (int i = 0; i < 100; i++) {
             int tmp = rand() % 100 - 50;
@@ -42,7 +41,7 @@ int main()
         copy(a.begin(), a.end(), ostream_iterator<float>{cout, " "});
         cout << endl;
 
-        // Отбрасываение дробной части и печать
+        
         vector <int> b;
         b.resize(a.size());
         copy(a.begin(), a.end(), b.begin());
@@ -50,7 +49,7 @@ int main()
         copy(b.begin(), b.end(), ostream_iterator<float>{cout, " "});
         cout << endl;
 
-        // Нахождение ошибки и печать
+        
         vector <float> c;
         c.resize(b.size());
         for (int i = 0; i < b.size(); c[i] = a[i] - b[i], i++);
